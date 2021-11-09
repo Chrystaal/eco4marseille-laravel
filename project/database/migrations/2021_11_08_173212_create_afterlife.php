@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUse extends Migration
+class CreateAfterlife extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateUse extends Migration
      */
     public function up()
     {
-        Schema::create('use', function (Blueprint $table) {
+        Schema::create('afterlife', function (Blueprint $table) {
             $table->id();
-            $table->string('glue');
-            $table->string('paint');
-            $table->string('lifespan_id');
+            $table->integer('recyclable');
+            $table->boolean('fixable');
+            $table->boolean('movable');
+            $table->boolean('eco_mobilier');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateUse extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('use');
+        Schema::dropIfExists('afterlife');
     }
 }

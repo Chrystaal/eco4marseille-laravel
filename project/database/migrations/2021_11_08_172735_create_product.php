@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDistribution extends Migration
+class CreateProduct extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateDistribution extends Migration
      */
     public function up()
     {
-        Schema::create('distribution', function (Blueprint $table) {
+        Schema::create('product', function (Blueprint $table) {
             $table->id();
-            $table->string('transportation_means_dis');
-            $table->string('conditioning');
+            $table->string('name');
+            $table->foreign('afterlife_id');
+            $table->foreign('product_use_id');
+            $table->foreign('distribution_id');
+            $table->foreign('sub_assembly_id');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateDistribution extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('distribution');
+        Schema::dropIfExists('product');
     }
 }
