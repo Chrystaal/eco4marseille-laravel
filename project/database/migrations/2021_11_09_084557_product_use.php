@@ -17,7 +17,7 @@ class ProductUse extends Migration
             $table->id();
             $table->string('glue');
             $table->string('paint');
-            $table->foreign('lifespan_id');
+            $table->foreign('lifespan_id')->references('id')->on('lifespan');
             $table->timestamps();
         });
     }

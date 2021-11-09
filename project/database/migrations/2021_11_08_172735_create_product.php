@@ -16,10 +16,10 @@ class CreateProduct extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreign('afterlife_id');
-            $table->foreign('product_use_id');
-            $table->foreign('distribution_id');
-            $table->foreign('sub_assembly_id');
+            $table->foreign('afterlife_id')->references('id')->on('afterlife');
+            $table->foreign('product_use_id')->references('id')->on('product_use');
+            $table->foreign('distribution_id')->references('id')->on('distribution');
+            $table->foreign('sub_assembly_id')->references('id')->on('sub_assembly');
             $table->timestamps();
         });
     }
