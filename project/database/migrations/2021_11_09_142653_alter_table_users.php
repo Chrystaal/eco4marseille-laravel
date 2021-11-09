@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ProductUse extends Migration
+class AlterTableUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class ProductUse extends Migration
      */
     public function up()
     {
-        Schema::create('product_use', function (Blueprint $table) {
-            $table->id();
-            $table->string('glue');
-            $table->string('paint');
-            $table->foreign('lifespan_id');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->unsignedBigInteger('product_id')->after('password');
+            $table->foreign('product_id')->references('id')->on('product');
         });
     }
 
@@ -29,6 +26,8 @@ class ProductUse extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('product_id');
+        });
     }
 }

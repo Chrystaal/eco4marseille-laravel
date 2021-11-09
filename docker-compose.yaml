@@ -9,12 +9,30 @@ services:
         uid: 1000
       context: ./project
       dockerfile: Dockerfile
-    command: bash -c 'php artisan serve --host 0.0.0.0 --port=8000'
     ports:
       - "8000:8000"
+    image: travellist
+    restart: unless-stopped
+    working_dir: /var/www/
+    command: bash -c 'composer install && composer update && php artisan key:generate && php artisan migrate && php artisan serve --host 0.0.0.0 --port=8000'
+    expose:
+      - 8000
+    volumes:
+      - ./project:/var/www
     networks:
       - eco4marseille
-
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '7070:80'
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - eco4marseille
   db:
     image: mysql:5.7
     env_file: ./.env
