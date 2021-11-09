@@ -21,4 +21,8 @@ class Afterlife extends Model
         'eco_mobilier',
     ];
 
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'afterlife_id');
+    }
 }

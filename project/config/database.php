@@ -1,6 +1,7 @@
 <?php
 
- use Illuminate\Support\Str;
+use Illuminate\Support\Str;
+
 
 return [
 
@@ -15,7 +16,9 @@ return [
     |
     */
 
-     'default' => env('DB_CONNECTION', 'mysql'), 
+
+    'default' => env('DB_CONNECTION', 'mysql'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -106,7 +109,9 @@ return [
     |
     */
 
-    'migrations' => 'migrations', 
+
+   'migrations' => 'migrations', 
+
 
     /*
     |--------------------------------------------------------------------------
@@ -119,7 +124,8 @@ return [
     |
     */
 
-     'redis' => [
+    'redis' => [
+
 
         'client' => env('REDIS_CLIENT', 'phpredis'),
 

@@ -18,4 +18,17 @@ class Sub_assembly extends Model
         'name',
 
     ];
+
+    public function product()
+    {
+        return $this->belongsToMany(product::class);
+    }
+    public function raw_material()
+    {
+        return $this->hasMany('App\raw_material', 'raw_material_id_id');
+    }
+    public function sub_assembly()
+    {
+        return $this->hasMany('App\sub_assembly', 'sub_assembly_id');
+    }
 }

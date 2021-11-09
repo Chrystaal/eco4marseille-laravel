@@ -15,7 +15,7 @@ class CreateRawMaterial extends Migration
     {
         Schema::create('raw_material', function (Blueprint $table) {
             $table->id();
-            $table->foreign('sub_assembly_id')->references('id')->on('sub_assembly');
+            $table->unsignedBigInteger('sub_assembly_id');
             $table->integer('weight');
             $table->string('material');
             $table->string('origin');
@@ -23,6 +23,7 @@ class CreateRawMaterial extends Migration
             $table->string('transportation_means_raw');
             $table->timestamps();
 
+            $table->foreign('sub_assembly_id')->references('id')->on('sub_assembly');
         });
     }
 
