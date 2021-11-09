@@ -12,32 +12,14 @@
 
     <title>Formulaire partie 2</title>
 </head>
-<h1 class="position-absolute top-10 start-50 translate-middle-x">TRES ecodesign </h1>
-<div class="m-5">
-    <div class="mt-4">
-        <h3> Etape 3 : Distribution </h3>
 
-        <label for="transportationdis"> Par quel moyen de transport les meubles sont-ils distribués ?</label>
-        <input class="form-control" type="text" id="transportationdis" name="transportationdis">
-        <label for="packaging"> Comment sont faits vos emballages ? (livraison à plat, carton, zéro plastique et suremballage, etc...)</label>
-        <input class="form-control" type="text" id="packaging" name="packaging">
+<div class="mt-4">
+        
+        <form action="{{ route('afterlife.post') }}" method="POST">
+        <h1 class="position-absolute top-10 start-50 translate-middle-x">TRES ecodesign </h1>
+<h2 class="position-absolute top-10 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h2> 
 
-    </div>
-    <div class="mt-4">
-        <h3> Etape 4 : Utilisation </h3>
-
-        <label for="glue"> Quelles sont les colles utilisées ?</label>
-        <input class="form-control" type="text" id="glue" name="glue">
-        <label for="paint"> Quelles sont les peintures utilisées ?</label>
-        <input class="form-control" type="text" id="paint" name="paint">
-        <label for="guarantee"> Combien de temps est garanti votre produit ?</label>
-        <input class="form-control" type="text" id="guarantee" name="guarantee">
-        <label for="resistance"> Quelle est la résistance mécanique de votre produit ?</label>
-        <input class="form-control" type="text" id="resistance" name="resistance">
-    </div>
-    <div class="mt-4">
-        <h3> Etape 5 : Fin de vie </h3>
-
+<h3 class="form-label mt-4"> Etape 5 : Fin de vie </h3>
         <label for="recycling"> Quel est le taux de recyclage du meuble ?</label>
         <input class="form-control mb-2" type="text" id="recycling" name="recycling">
         <label for="paint"> Est-il démontable ? :</label>
@@ -57,9 +39,8 @@
             <label class="form-check-label" for="flexSwitchCheckDefault">oui</label>
             <input class="ml-2 form-check-input" type="checkbox" id="flexSwitchCheckDefault">
             <label class="ml-5 form-check-label" for="flexSwitchCheckDefault">non</label>
+            <button type="submit" class="btn btn-success mt-4">Valider</button>
+</form>
         </div>
 
-        <button type="submit" class="btn btn-success mt-4">Valider</button>
-    </div>
-</div>
-@endsection
+        @endsection

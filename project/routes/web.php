@@ -28,7 +28,13 @@ Route::get('/', function () {
 });
 
 Route::view('/form', 'form');
-Route::view('/formpart2', 'formpart2');
+Route::view('/form2', 'form2');
+Route::view('/form3', 'form3');
+Route::view('/form4', 'form4');
+Route::view('/form5', 'form5');
+Route::view('/form6', 'form6');
+Route::view('/form7', 'form7');
+Route::view('/result', 'result');
 
 Route::resource('product', ProductController::class);
 Route::resource('afterlife', AfterlifeController::class);
