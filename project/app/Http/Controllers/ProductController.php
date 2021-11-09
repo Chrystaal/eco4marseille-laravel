@@ -41,8 +41,9 @@ class ProductController extends Controller
         $afterlife = DB::table('afterlife')->get();
 
 
-        
-        return view('formulaire blade', ['product' => $product]);
+        return view('results', ['product' => $product, 'sub_assembly' => $sub_assembly,'raw_material' => $raw_material,
+                                'assembly' =>$assembly,'distribution' => $distribution,
+                                'product_use'=>$product_use,'lifespan'=>$lifespan,'afterlife'=>$afterlife]);
     }
 
     /**
