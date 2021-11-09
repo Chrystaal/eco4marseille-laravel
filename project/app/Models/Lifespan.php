@@ -19,4 +19,11 @@ class Lifespan extends Model
         'resistance',
 
     ];
+
+    public function product_use()
+    {
+        return $this->belongsTo(Product_use::class, 'lifespan_id');
+    }
+
 }
+

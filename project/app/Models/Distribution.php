@@ -18,4 +18,10 @@ class Distribution extends Model
         'transportation_means_dis',
         'conditioning',
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'distribution_id');
+    }
+
 }
