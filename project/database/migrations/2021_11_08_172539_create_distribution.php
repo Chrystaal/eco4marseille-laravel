@@ -15,7 +15,6 @@ class CreateDistribution extends Migration
     {
         Schema::create('distribution', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('transportation_means_dis');
             $table->string('conditioning');
             $table->timestamps();
