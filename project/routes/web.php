@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::view('/form', 'form');
+Route::view('/formpart2', 'formpart2');
 
 Route::resource('product', ProductController::class);
 Route::resource('afterlife', AfterlifeController::class);
