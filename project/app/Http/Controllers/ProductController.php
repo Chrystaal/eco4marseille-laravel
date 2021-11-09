@@ -31,11 +31,14 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $product = Product::join('product','product.afterlife_id','=','afterlife.id')
-                            ->join('product','product.product_use_id','=','product_use.id')
-                            ->join('product','product.ditribution_id','=','distribution.id')
-                            ->join('product','product.sub_assembly_id','=','sub_assembly.id')
-                            ->get('product.name');
+        $product = DB::table('product')->get();
+        $sub_assembly = DB::table('sub_assembly')->get();
+        $raw_material = DB::table('raw_material')->get();
+        $assembly = DB::table('assembly')->get();
+        $distribution = DB::table('distribution')->get();
+        $product_use = DB::table('product_use')->get();
+        $lifespan = DB::table('lifespan')->get();
+        $afterlife = DB::table('afterlife')->get();
 
 
         
