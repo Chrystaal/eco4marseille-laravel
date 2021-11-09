@@ -18,5 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/form', 'form');
 
 Route::resource('product', ProductController::class);
