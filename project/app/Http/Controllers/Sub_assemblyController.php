@@ -49,7 +49,7 @@ class Sub_assemblyController extends Controller
         Sub_assembly::create($input);
      
         return redirect()->route('index')
-                        ->with('success','Form created successfully.');
+                        ->with('success','Sub  assembly created successfully.');
     }
 
     /**
