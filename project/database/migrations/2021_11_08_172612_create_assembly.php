@@ -15,7 +15,7 @@ class CreateAssembly extends Migration
     {
         Schema::create('assembly', function (Blueprint $table) {
             $table->id();
-            $table->integer('sub_assembly_id');
+            $table->id('sub_assembly_id');
             $table->string('transportation_means_assembly');
             $table->string('energy');
             $table->string('loss_rate');

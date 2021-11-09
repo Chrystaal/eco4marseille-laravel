@@ -15,7 +15,7 @@ class CreateRawMaterial extends Migration
     {
         Schema::create('raw_material', function (Blueprint $table) {
             $table->id();
-            $table->integer('sub_assembly_id');
+            $table->id('sub_assembly_id');
             $table->integer('weight');
             $table->string('material');
             $table->string('origin');

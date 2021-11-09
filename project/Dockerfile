@@ -35,7 +35,7 @@ RUN mkdir -p /home/$user/.composer && \
 # Set working directory
 WORKDIR /var/www
 
-RUN composer install
+#RUN composer install
 RUN composer update
 # RUN php artisan migrate
 RUN php artisan key:generate
