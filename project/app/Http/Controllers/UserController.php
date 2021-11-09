@@ -51,7 +51,7 @@ class UserController extends Controller
         User::create($input);
      
         return redirect()->route('index')
-                        ->with('success','Form created successfully.');
+                        ->with('success','User created successfully.');
     }
 
     /**
