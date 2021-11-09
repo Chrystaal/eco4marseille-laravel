@@ -32,7 +32,7 @@ class Product_useController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store_product_use(Request $request)
     {
         
   

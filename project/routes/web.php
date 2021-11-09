@@ -38,10 +38,10 @@ Route::post('post-registration', [AuthController::class, 'postRegistration'])->n
 Route::get('dashboard', [AuthController::class, 'dashboard']); 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::post('form', [AfterlifeController::class, 'store'])->name('form');
-Route::post('form', [AssemblyController::class, 'store'])->name('form');
-Route::post('form', [DistributionController::class, 'store'])->name('form');
-Route::post('form', [LifespanController::class, 'store'])->name('form');
-Route::post('form', [Product_useController::class, 'store'])->name('form');
-Route::post('form', [Raw_materialController::class, 'store'])->name('form');
-Route::post('form', [Sub_assemblyController::class, 'store'])->name('form');
+Route::post('form', [AfterlifeController::class, 'store_afterlife'])->name('form');
+Route::post('form', [AssemblyController::class, 'store_assembly'])->name('form');
+Route::post('form', [DistributionController::class, 'store_distribution'])->name('form');
+Route::post('form', [LifespanController::class, 'store_lifespan'])->name('form');
+Route::post('form', [Product_useController::class, 'store_product_use'])->name('form');
+Route::post('form', [Raw_materialController::class, 'store_raw_material'])->name('form');
+Route::post('form', [Sub_assemblyController::class, 'store_sub_assembly'])->name('form');

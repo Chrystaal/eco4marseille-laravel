@@ -32,7 +32,7 @@ class Raw_materialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store_raw_material(Request $request)
     {
         
   
