@@ -1,58 +1,44 @@
 @extends('layout')
-  
+
 @section('content')
-<div>
-    <h1>TRES ecodesign </h1>
-    <h2> Informations techniques - analyses d'impact environnemental </h2>
-        <label for="productname"> Nom du produit :</label>
-        <input type="text" id="productname" name="productname">
-        <label for="producttype"> Type de produit :</label>
-        <input type="text" id="producttype" name="producttype">
-    
-    <div>
-        <form action={{ route("store_sub_assembly") }} method=POST>
-        <label for="subassembly"> Quel est le sous-ensemble concerné ? </label>
-        <input type="text" id="subassembly" name="name">
-    </form>
 
-    <div>
-        <h3> Etape 1 : Matières Premières </h3>
+<!DOCTYPE html>
+<html lang="en">
 
-        <form action={{ route("store_raw_material") }} method=POST>
-            <label for="weight"> Quelle est sa masse (kg)? :</label>
-            <input type="text" id="weight" name="weight">
-            <label for="material"> Quelle est la matière utilisée ? :</label>
-            <input type="text" id="material" name="material">
-            <label for="origin"> D'où provient-elle ? :</label>
-            <input type="text" id="origin" name="origin">
-            <label for="transformation"> Où est-elle transformée ? :</label>
-            <input type="text" id="transformation" name="transformation_location">
-            <label for="transportation">Comment est-elle transportée vers le lieu de transformation ? :</label>
-            <input type="text" id="transportation" name="transportation_means_raw">
-        </form>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Formulaire partie 1</title>
+</head>
 
-    </div>
+    <h1 class="position-absolute top-10 start-50 translate-middle-x">TRES ecodesign </h1>
     <div>
-        <h3> Etape 2 : Fabrication et Assemblage </h3>
-        <form action={{ route("store_assembly") }} method=POST>
-            <label for="transportation"> Comment est-il transporté vers le lieu d'assemblage ? :</label>
-            <input type="text" id="transportation" name="transportation_means_assembly">
-            <label for="energy"> Quel est le mix énergétique des différentes usines ? :</label>
-            <input type="text" id="energy" name="energy">
-            <label for="lossratio"> Quel est le taux de pertes résiduelles de la fabrication ? :</label>
-            <input type="text" id="lossratio" name="loss_rate">
-            <label for="location"> Où se trouve le lieu d'assemblage ? :</label>
-            <input type="text" id="location" name="assembly_location">
-        </form>
+        <div class="m-5">
+            <h2 class="form-label"> Informations techniques - analyses d'impact environnemental </h2>
+            <label for="productname"> Nom du produit :</label>
+            <input class="form-control" type="text" id="productname" name="productname">
+            <label for="producttype"> Type de produit :</label>
+            <input class="form-control type=" text" id="producttype" name="producttype">
+            <div>
+                <h3 class="form-label mt-4"> Etape 1 : Matières Premières </h3>
+
+                <label for="transportation"> Comment est-il transporté vers le lieu d'assemblage ? :</label>
+                <input class="form-control" type=" text" id="transportation" name="transportation">
+                <label for="energy"> Quel est le mix énergétique des différentes usines ? :</label>
+                <input class="form-control" type=" text" id="energy" name="energy">
+                <label for="lossratio"> Quel est le taux de pertes résiduelles de la fabrication ? :</label>
+                <input class="form-control" type=" text" id="lossratio" name="lossratio">
+                <label for="location"> Où se trouve le lieu d'assemblage ? :</label>
+                <input class="form-control" type=" text" id="location" name="location">
+            </div>
+            <button type="submit" class="btn btn-success mt-3">Soumettre</button>
+            <div>
+            <label class="mt-4" for="subassembly">Votre meuble a-t-il d'autres sous-ensembles ? </label>
+            <button type="submit" class="btn btn-success">OUI</button>
+            <button type="submit" class="btn btn-success">NON</button></div>
+        </div>
     </div>
 
-
-    <button type="submit" class="btn btn-primary">Soumettre</button>
-    
-        <label for="subassembly">Votre meuble a-t-il d'autres sous-ensembles ? </label>
-        <button type="submit" class="btn btn-primary">OUI</button>
-        <button type="submit" class="btn btn-primary">NON</button>
-    </div>
-    
-</div>
-@endsection
+    @endsection
