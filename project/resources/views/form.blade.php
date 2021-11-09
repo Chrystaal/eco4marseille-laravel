@@ -77,6 +77,8 @@
             <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
             <label class="form-check-label" for="flexSwitchCheckDefault">non</label>
         </div>
+
+        <button type="submit" class="btn btn-primary">Valider</button>
     </div>
     
 </div>
