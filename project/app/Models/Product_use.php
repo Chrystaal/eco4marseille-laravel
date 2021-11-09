@@ -19,4 +19,13 @@ class Product_use extends Model
         'paint',
         
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class, 'product_use_id');
+    }
+    public function lifespan()
+    {
+        return $this->hasMany('App\lifespan', 'lifespan_id');
+    }
 }

@@ -51,14 +51,10 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         
-        $request['afterlife_id'] = ['afterlife.id'];
-        $request['user_id'] = Auth::user()->id;
+  
         $request->validate([
                 'name' => 'required',
-                'afterlife_id' => 'required|integer',
-                'product_use_id' => 'required|integer',
-                'distribution_id' => 'required||integer',
-                'sub_assembly_id' => 'required|integer'
+
 
         ]);
 
