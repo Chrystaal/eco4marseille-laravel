@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClient extends Migration
+class ProductUse extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateClient extends Migration
      */
     public function up()
     {
-        Schema::create('client', function (Blueprint $table) {
+        Schema::create('product_use', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('product_id');
+            $table->string('glue');
+            $table->string('paint');
+            $table->foreign('lifespan_id');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateClient extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client');
+        //
     }
 }

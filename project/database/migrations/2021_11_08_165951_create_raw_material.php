@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProduct extends Migration
+class CreateRawMaterial extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateProduct extends Migration
      */
     public function up()
     {
-        Schema::create('product', function (Blueprint $table) {
+        Schema::create('raw_material', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->foreign('afterlife_id');
-            $table->foreign('product_use_id');
-            $table->foreign('distribution_id');
             $table->foreign('sub_assembly_id');
+            $table->integer('weight');
+            $table->string('material');
+            $table->string('origin');
+            $table->string('transformation_location');
+            $table->string('transportation_means_raw');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateProduct extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product');
+        Schema::dropIfExists('raw_material');
     }
 }
