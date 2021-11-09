@@ -20,4 +20,9 @@ class Assembly extends Model
         'loss_rate',
         'assembly_location',
     ];
+
+    public function sub_assembly()
+    {
+        return $this->belongsToMany(Assembly::class, 'sub_assenbly_id');
+    }
 }
