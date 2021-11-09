@@ -3,6 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\AfterlifeController;
+use App\Http\Controllers\AssemblyController;
+use App\Http\Controllers\DistributionController;
+use App\Http\Controllers\LifespanController;
+use App\Http\Controllers\Product_useController;
+use App\Http\Controllers\Raw_materialController;
+use App\Http\Controllers\Sub_assemblyController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,10 +46,10 @@ Route::post('post-registration', [AuthController::class, 'postRegistration'])->n
 Route::get('dashboard', [AuthController::class, 'dashboard']); 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::post('form', [AfterlifeController::class, 'store_afterlife'])->name('form');
-Route::post('form', [AssemblyController::class, 'store_assembly'])->name('form');
-Route::post('form', [DistributionController::class, 'store_distribution'])->name('form');
-Route::post('form', [LifespanController::class, 'store_lifespan'])->name('form');
-Route::post('form', [Product_useController::class, 'store_product_use'])->name('form');
-Route::post('form', [Raw_materialController::class, 'store_raw_material'])->name('form');
-Route::post('form', [Sub_assemblyController::class, 'store_sub_assembly'])->name('form');
+Route::post('afterlife', [AfterlifeController::class, 'store_afterlife'])->name('afterlife.post');
+Route::post('assembly', [AssemblyController::class, 'store_assembly'])->name('assembly.post');
+Route::post('distribution', [DistributionController::class, 'store_distribution'])->name('distribution.post');
+Route::post('lifespan', [LifespanController::class, 'store_lifespan'])->name('lifespan.post');
+Route::post('product_use', [Product_useController::class, 'store_product_use'])->name('product_use.post');
+Route::post('raw_material', [Raw_materialController::class, 'store_raw_material'])->name('raw_material.post');
+Route::post('sub_assembly', [Sub_assemblyController::class, 'store_sub_assembly'])->name('sub_assembly.post');

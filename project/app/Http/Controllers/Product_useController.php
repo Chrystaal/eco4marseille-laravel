@@ -48,7 +48,7 @@ class Product_useController extends Controller
 
         Product_use::create($input);
      
-        return redirect()->route('index')
+        return redirect()->route('dashboard')
                         ->with('success','Form created successfully.');
     }
 

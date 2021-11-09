@@ -4,21 +4,21 @@
 <div>
     <h1>TRES ecodesign </h1>
     <h2> Informations techniques - analyses d'impact environnemental </h2>
-        <label for="productname"> Nom du produit :</label>
-        <input type="text" id="productname" name="productname">
-        <label for="producttype"> Type de produit :</label>
-        <input type="text" id="producttype" name="producttype">
+        <label for="product"> Nom du produit :</label>
+        <input type="text" id="product" name="product">
+        <label for="product"> Type de produit :</label>
+        <input type="text" id="product" name="product">
     
     <div>
-        <form action={{ route("store_sub_assembly") }} method=POST>
-        <label for="subassembly"> Quel est le sous-ensemble concerné ? </label>
-        <input type="text" id="subassembly" name="name">
+        <form action="{{ route('sub_assembly.post') }}" method="POST">
+        <label for="sub_assembly"> Quel est le sous-ensemble concerné ? </label>
+        <input type="text" id="sub_assembly" name="name">
     </form>
 
     <div>
         <h3> Etape 1 : Matières Premières </h3>
 
-        <form action={{ route("store_raw_material") }} method=POST>
+        <form action="{{ route('raw_material.post') }}" method="POST">
             <label for="weight"> Quelle est sa masse (kg)? :</label>
             <input type="text" id="weight" name="weight">
             <label for="material"> Quelle est la matière utilisée ? :</label>
@@ -34,7 +34,7 @@
     </div>
     <div>
         <h3> Etape 2 : Fabrication et Assemblage </h3>
-        <form action={{ route("store_assembly") }} method=POST>
+        <form action="{{ route('assembly.post') }}" method="POST">
             <label for="transportation"> Comment est-il transporté vers le lieu d'assemblage ? :</label>
             <input type="text" id="transportation" name="transportation_means_assembly">
             <label for="energy"> Quel est le mix énergétique des différentes usines ? :</label>

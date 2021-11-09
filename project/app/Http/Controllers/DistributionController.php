@@ -49,7 +49,7 @@ class DistributionController extends Controller
 
         Distribution::create($input);
      
-        return redirect()->route('index')
+        return redirect()->route('dashboard')
                         ->with('success','Form created successfully.');
     }
 
