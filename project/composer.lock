@@ -4210,6 +4210,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
+
             "version": "dev-main",
             "source": {
                 "type": "git",
@@ -4220,11 +4221,13 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/11b9acb5e8619aef6455735debf77dde8825795c",
                 "reference": "11b9acb5e8619aef6455735debf77dde8825795c",
+
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
+
             "provide": {
                 "ext-mbstring": "*"
             },
@@ -4232,6 +4235,7 @@
                 "ext-mbstring": "For best performance"
             },
             "default-branch": true,
+
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -4274,7 +4278,9 @@
                 "shim"
             ],
             "support": {
+
                 "source": "https://github.com/symfony/polyfill-mbstring/tree/main"
+
             },
             "funding": [
                 {
@@ -4290,7 +4296,9 @@
                     "type": "tidelift"
                 }
             ],
+
             "time": "2021-10-20T20:35:02+00:00"
+
         },
         {
             "name": "symfony/polyfill-php72",
@@ -5585,6 +5593,7 @@
         },
         {
             "name": "facade/ignition",
+
             "version": "2.14.1",
             "source": {
                 "type": "git",
@@ -5598,6 +5607,7 @@
                 "shasum": ""
             },
             "require": {
+
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "facade/flare-client-php": "^1.9.1",
@@ -5657,6 +5667,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
+
             "time": "2021-10-08T12:34:52+00:00"
         },
         {

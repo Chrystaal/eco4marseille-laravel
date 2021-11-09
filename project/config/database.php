@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Str;
+/* use Illuminate\Support\Str;
 
 return [
 
@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    /* 'default' => env('DB_CONNECTION', 'mysql'), */
 
     /*
     |--------------------------------------------------------------------------
@@ -32,8 +32,10 @@ return [
     | choice installed on your machine before you begin development.
     |
     */
+
 /*
     'connections' => [
+
 
         'sqlite' => [
             'driver' => 'sqlite',
@@ -91,7 +93,7 @@ return [
             'prefix_indexes' => true,
         ],
 
-    ],
+    ], */
 
     /*
     |--------------------------------------------------------------------------
@@ -104,7 +106,7 @@ return [
     |
     */
 
-    'migrations' => 'migrations',
+   /*  'migrations' => 'migrations', */
 
     /*
     |--------------------------------------------------------------------------
@@ -117,7 +119,7 @@ return [
     |
     */
 
-    'redis' => [
+    /* 'redis' => [
 
         'client' => env('REDIS_CLIENT', 'phpredis'),
 
@@ -142,6 +144,6 @@ return [
             'database' => env('REDIS_CACHE_DB', '1'),
         ],
 
-    ],
+    ], 
 
-];
+];*/
