@@ -33,7 +33,7 @@ class DistributionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store_distribution(Request $request)
     {
         
   
@@ -49,7 +49,7 @@ class DistributionController extends Controller
 
         Distribution::create($input);
      
-        return redirect()->route('index')
+        return redirect()->route('dashboard')
                         ->with('success','Form created successfully.');
     }
 
