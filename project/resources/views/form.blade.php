@@ -47,7 +47,7 @@
     </div>
 
 
-    <button type="submit" class="btn btn-primary">Soumettre</button>
+    <button type="submit"  class="btn btn-primary">Soumettre</button>
     
         <label for="subassembly">Votre meuble a-t-il d'autres sous-ensembles ? </label>
         <button type="submit" class="btn btn-primary">OUI</button>
