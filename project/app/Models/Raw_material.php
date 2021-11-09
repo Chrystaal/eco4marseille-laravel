@@ -20,4 +20,8 @@ class Raw_material extends Model
 
     ];
 
+    public function sub_assembly()
+    {
+        return $this->belongsToMany(Sub_assembly::class, 'sub_assenbly_id');
+    }
 }
