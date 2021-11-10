@@ -50,7 +50,7 @@ class AssemblyController extends Controller
 
         Assembly::create($input);
      
-        return redirect()->route('dashboard')
+        return redirect()->route('form4')
                         ->with('success','Form created successfully.');
     }
 

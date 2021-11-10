@@ -51,7 +51,7 @@ class Raw_materialController extends Controller
 
         Raw_material::create($input);
      
-        return redirect()->route('dashboard')
+        return redirect()->route('form3')
                         ->with('success','Form created successfully.');
     }
 

@@ -31,19 +31,27 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $product = DB::table('product')->get();
-        $sub_assembly = DB::table('sub_assembly')->get();
-        $raw_material = DB::table('raw_material')->get();
-        $assembly = DB::table('assembly')->get();
-        $distribution = DB::table('distribution')->get();
-        $product_use = DB::table('product_use')->get();
-        $lifespan = DB::table('lifespan')->get();
-        $afterlife = DB::table('afterlife')->get();
 
 
-        return view('results', ['product' => $product, 'sub_assembly' => $sub_assembly,'raw_material' => $raw_material,
-                                'assembly' =>$assembly,'distribution' => $distribution,
-                                'product_use'=>$product_use,'lifespan'=>$lifespan,'afterlife'=>$afterlife]);
+        $users = User::join('product', 'users.id', '=', 'product.user_id')
+                       ->join('sub_assembly', 'product.id', '=', 'sub_assembly_id')
+                       ->join('raw_material', 'sub_assembly.id','=','raw_material_id')
+                       ->join('assembly','sub_assembly.id','=','assembly_id')
+                       ->join('distribution','product.id','=','distribution_id')
+                       ->join('product_use','product_id','=','product_use_id')
+                       ->join('lifespan','product_use.id','=','lifespan_id')
+                       ->join('afterlife','product.id','=','afterlife_id')
+                        ->get(['product.name.', 'sub_assembly.name','raw_material.weight',
+                        'raw_material.material','raw_material.origin','raw_material.transformation_location',
+                        'raw_material.transporation_means_raw','assembly.transportation_means_ass',
+                        'assembly.energy','assembly.loss_rate','assembly.assembly_location',
+                        'distribution.transportation_means_dis','distribution.conditioning',
+                        'product_use.glue','product_use.paint','lifespan.guarantee',
+                        'lifespan.resistance','afterlife.recyclable','afterlife.fixable',
+                        'afterlife.removable','afterlife.eco_mobilier']);
+
+
+        return view('results', ['users' => $users]);
     }
 
     /**
@@ -66,7 +74,7 @@ class ProductController extends Controller
 
         Product::create($input);
      
-        return redirect()->route('dashboard')
+        return redirect()->route('form')
                         ->with('success','Form created successfully.');
     }
 

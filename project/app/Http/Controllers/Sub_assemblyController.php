@@ -48,7 +48,7 @@ class Sub_assemblyController extends Controller
 
         Sub_assembly::create($input);
      
-        return redirect()->route('dashboard')
+        return redirect()->route('form2')
                         ->with('success','Sub  assembly created successfully.');
     }
 
