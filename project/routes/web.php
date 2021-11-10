@@ -61,4 +61,3 @@ Route::post('form6', [Product_useController::class, 'store_product_use'])->name(
 Route::post('form3', [Raw_materialController::class, 'store_raw_material'])->name('raw_material.post');
 Route::post('form2', [Sub_assemblyController::class, 'store_sub_assembly'])->name('sub_assembly.post');
 Route::post('form', [ProductController::class, 'store_product'])->name('product.post');
-

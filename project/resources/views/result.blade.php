@@ -12,13 +12,11 @@
 
     <title>Formulaire partie 2</title>
 </head>
+<h4 class="position-absolute mt-3 top-0 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h4>
 
-<div class="mt-4">
+<div class="m-5">
         
         <form action="{{ route('afterlife.post') }}" method="POST">
-        <h1 class="position-absolute top-10 start-50 translate-middle-x">TRES ecodesign </h1>
-<h2 class="position-absolute top-10 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h2> 
-
 <h3 class="form-label mt-4"> Etape 5 : Fin de vie </h3>
         <label for="recycling"> Quel est le taux de recyclage du meuble ?</label>
         <input class="form-control mb-2" type="text" id="recycling" name="recycling">
@@ -39,8 +37,12 @@
             <label class="form-check-label" for="flexSwitchCheckDefault">oui</label>
             <input class="ml-2 form-check-input" type="checkbox" id="flexSwitchCheckDefault">
             <label class="ml-5 form-check-label" for="flexSwitchCheckDefault">non</label>
+            <br/>
             <button type="submit" class="btn btn-success mt-4">Valider</button>
-</form>
+        </form>
+        
+        <br/>
+        <a href="{{ url('/dashboard') }}">FIN</a>
         </div>
 
         @endsection

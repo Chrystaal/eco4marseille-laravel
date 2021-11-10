@@ -1,11 +1,10 @@
 @extends('layout')
 
 @section('content')
-<!DOCTYPE html>
 <html lang="en">
-<div>
-    <h1 class="position-absolute top-10 start-50 translate-middle-x">TRES ecodesign </h1>
-    <h2 class="position-absolute top-10 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h2>
+
+<h4 class="position-absolute mt-3 top-0 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h4>
+<div class="m-5">
     <h3 class="form-label mt-4"> Etape 1 : Matières Premières</h3>
     <form action="{{ route('raw_material.post') }}" method="POST">
             <label for="weight"> Quelle est sa masse (kg)? :</label>
@@ -20,6 +19,8 @@
             <input class="form-control" type="text" id="transportation" name="transportation_means_raw">
             <button type="submit"  class="btn btn-success mt-3">Valider</button>
     </form>
+
+    <a href="{{ url('/form4') }}">Page suivante</a>
 </div>
 
 @endsection

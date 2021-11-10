@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Laravel - ItSolutionStuff.com</title>
+    <title>TRES écodesign</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style type="text/css">
@@ -44,13 +44,16 @@
             margin-left: 0;
             margin-right: 0;
         }
+        .titre {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     
 <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
     <div class="container">
-        <a class="navbar-brand" href="#">Laravel</a>
+        <a class="navbar-brand" href="https://tres-ecodesign.com">TRES écodesign</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

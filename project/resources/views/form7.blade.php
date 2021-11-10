@@ -12,14 +12,9 @@
 
     <title>Formulaire partie 2</title>
 </head>
-
-
-<div class="mt-4">
-    
+<h4 class="position-absolute mt-3 top-0 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h4>
+<div class="m-5">
         <form action="{{ route('product_use.post') }}" method="POST">
-        <h1 class="position-absolute top-10 start-50 translate-middle-x">TRES ecodesign </h1>
-<h2 class="position-absolute top-10 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h2> 
-
 <h3 class="form-label mt-4"> Etape 4bis : Durée de vie </h3>
         <label for="guarantee"> Combien de temps est garanti votre produit ?</label>
         <input class="form-control" type="text" id="guarantee" name="guarantee">
@@ -27,6 +22,8 @@
         <input class="form-control" type="text" id="resistance" name="resistance">
         <button type="submit" class="btn btn-success mt-4">Valider</button>
 </form>
+
+<a href="{{ url('/result') }}">Page suivante</a>
 </div>
 
 @endsection

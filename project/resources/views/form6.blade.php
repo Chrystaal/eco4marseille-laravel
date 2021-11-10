@@ -12,16 +12,11 @@
 
     <title>Formulaire partie 2</title>
 </head>
+<h4 class="position-absolute mt-3 top-0 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h4>
+
 <div class="m-5">
-
-
-
 <div class="mt-4">
-       
         <form action="{{ route('product_use.post') }}" method="POST">
-
-<h1 class="position-absolute top-10 start-50 translate-middle-x">TRES ecodesign </h1>
-<h2 class="position-absolute top-10 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h2> 
 <h3 class="form-label mt-4"> Etape 4 : Utilisation </h3>
 
         <label for="glue"> Quelles sont les colles utilisées ?</label>
@@ -30,6 +25,8 @@
         <input class="form-control" type="text" id="paint" name="paint">
         <button type="submit" class="btn btn-success mt-4">Valider</button>
 </form>
+
+<a href="{{ url('/form7') }}">Page suivante</a>
     </div>
 </div>
 

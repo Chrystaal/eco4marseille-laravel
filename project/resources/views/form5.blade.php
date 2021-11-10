@@ -12,16 +12,12 @@
 
     <title>Formulaire partie 2</title>
 </head>
+<h4 class="position-absolute mt-3 top-0 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h4>
 <div class="m-5">
-
-
-
     <div class="mt-4">
 
     <form action="{{ route('distribution.post') }}" method="POST">
-        
-    <h1 class="position-absolute top-10 start-50 translate-middle-x">TRES ecodesign </h1>   
-    <h2 class="position-absolute top-10 start-50 translate-middle-x"> Informations techniques - analyses d'impact environnemental </h2>
+
     <h3 class="form-label mt-4"> Etape 3 : Distribution </h3>
 
         <label for="transportationdis"> Par quel moyen de transport les meubles sont-ils distribués ?</label>
@@ -30,7 +26,7 @@
         <input class="form-control" type="text" id="packaging" name="packaging">
         <button type="submit" class="btn btn-success mt-4">Valider</button>
     </form>
-
+    <a href="{{ url('/form6') }}">Page suivante</a>
     </div>
    
     
