@@ -33,7 +33,7 @@ class AfterlifeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store_Afterlife(Request $request)
     {
         
   
@@ -50,7 +50,7 @@ class AfterlifeController extends Controller
 
         Afterlife::create($input);
      
-        return redirect()->route('index')
+        return redirect()->route('dashboard')
                         ->with('success','Form created successfully.');
     }
 

@@ -33,7 +33,7 @@ class AssemblyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store_assembly(Request $request)
     {
         
   
@@ -50,7 +50,7 @@ class AssemblyController extends Controller
 
         Assembly::create($input);
      
-        return redirect()->route('index')
+        return redirect()->route('dashboard')
                         ->with('success','Form created successfully.');
     }
 

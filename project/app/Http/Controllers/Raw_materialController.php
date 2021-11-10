@@ -32,7 +32,7 @@ class Raw_materialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store_raw_material(Request $request)
     {
         
   
@@ -51,7 +51,7 @@ class Raw_materialController extends Controller
 
         Raw_material::create($input);
      
-        return redirect()->route('index')
+        return redirect()->route('dashboard')
                         ->with('success','Form created successfully.');
     }
 
