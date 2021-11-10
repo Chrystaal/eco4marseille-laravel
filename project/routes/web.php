@@ -53,10 +53,12 @@ Route::post('post-registration', [AuthController::class, 'postRegistration'])->n
 Route::get('dashboard', [AuthController::class, 'dashboard']); 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::post('afterlife', [AfterlifeController::class, 'store_afterlife'])->name('afterlife.post');
-Route::post('assembly', [AssemblyController::class, 'store_assembly'])->name('assembly.post');
-Route::post('distribution', [DistributionController::class, 'store_distribution'])->name('distribution.post');
-Route::post('lifespan', [LifespanController::class, 'store_lifespan'])->name('lifespan.post');
-Route::post('product_use', [Product_useController::class, 'store_product_use'])->name('product_use.post');
-Route::post('raw_material', [Raw_materialController::class, 'store_raw_material'])->name('raw_material.post');
-Route::post('sub_assembly', [Sub_assemblyController::class, 'store_sub_assembly'])->name('sub_assembly.post');
+Route::post('result', [AfterlifeController::class, 'store_afterlife'])->name('afterlife.post');
+Route::post('form4', [AssemblyController::class, 'store_assembly'])->name('assembly.post');
+Route::post('form5', [DistributionController::class, 'store_distribution'])->name('distribution.post');
+Route::post('form7', [LifespanController::class, 'store_lifespan'])->name('lifespan.post');
+Route::post('form6', [Product_useController::class, 'store_product_use'])->name('product_use.post');
+Route::post('form3', [Raw_materialController::class, 'store_raw_material'])->name('raw_material.post');
+Route::post('form2', [Sub_assemblyController::class, 'store_sub_assembly'])->name('sub_assembly.post');
+Route::post('form', [ProductController::class, 'store_product'])->name('product.post');
+

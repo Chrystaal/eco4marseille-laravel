@@ -49,7 +49,7 @@ class LifespanController extends Controller
 
         Lifespan::create($input);
      
-        return redirect()->route('dashboard')
+        return redirect()->route('form7')
                         ->with('success','Form created successfully.');
     }
 

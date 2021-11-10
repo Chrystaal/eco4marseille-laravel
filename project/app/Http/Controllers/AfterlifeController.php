@@ -50,7 +50,7 @@ class AfterlifeController extends Controller
 
         Afterlife::create($input);
      
-        return redirect()->route('dashboard')
+        return redirect()->route('result')
                         ->with('success','Form created successfully.');
     }
 
